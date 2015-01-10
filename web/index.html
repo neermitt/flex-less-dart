@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+
+<header class="page-header">
+    <h1 class="title">CSS Flexbox Examples</h1>
+</header>
+
+<article class="example" id="example-1">
+    <header>
+        <h1>Example-1 Applying flexbox to the container</h1>
+
+        <p>In the first example, we can observe what happens to child elements (item 1, item 2 and item 3) when their
+            parent element (the box surrounding the three elements) has the following applied to it: <code>display :
+                flex</code></p>
+        <p>Note: The parent element has its width set to 90% and the child elements (the three boxes) have their width set at 20%.</p>
+    </header>
+    <section class="simple-example">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </section>
+</article>
+
+<article class="example" id="example-2">
+    <header>
+        <h1>Example-2 Orientation</h1>
+        <p>By default, items within a flexbox will flow horizontally. Here's a small example of using <code>flex-direction: column;</code> on the parent container.</p>
+    </header>
+    <section class="orientation-example">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </section>
+    <p>The default value for the <code>flex-direction</code> property is <code>row</code>.</p>
+</article>
+
+<article class="example" id="example-3">
+    <header>
+        <h1>Example 3 - Alignment on the main axis (flex-pack)</h1>
+        <p>We can use the <code>justify-content</code> property to state how we wish for our items to be aligned.  <code>justify-content</code> accepts one of the following four values: <code>start, end, justify & center</code></p>
+    </header>
+    <h4>Start</h4>
+    <section class="alignment-example alignment-start">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </section>
+    <h4>End</h4>
+    <section class="alignment-example alignment-end">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </section>
+    <h4>Center</h4>
+    <section class="alignment-example alignment-center">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </section>
+    <h4>Space Between</h4>
+    <section class="alignment-example alignment-space-between">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </section>
+    <h4>Space Around</h4>
+    <section class="alignment-example alignment-space-around">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </section>
+</article>
+
+
+</body>
+</html>

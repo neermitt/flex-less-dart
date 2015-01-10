@@ -1,0 +1,381 @@
+
+
+.inline-flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+}
+
+.flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.flex(@spec; @flex) when (@flex = none) and (@spec = 2013), (@spec = tweener) {
+  -webkit-flex: 0 0 auto;
+  -moz-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  -o-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.flex(@spec; @flex) when (@flex = auto) and (@spec = 2013), (@spec = tweener) {
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  -o-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.flex(@spec; @flex) when (@flex = initial) and (@spec = 2013), (@spec = tweener) {
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -o-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.flex(@spec; @grow) when (@grow = none) and (@spec = 2009) {
+  -webkit-box-flex: 0.0;
+  -moz-box-flex: 0.0;
+  -ms-box-flex: 0.0;
+  -o-box-flex: 0.0;
+  box-flex: 0.0;
+}
+
+.flex(@spec; @grow) when (isnumber(@grow)) and (@spec = 2009) {
+  -webkit-box-flex: @grow;
+  -moz-box-flex: @grow;
+  -ms-box-flex: @grow;
+  -o-box-flex: @grow;
+  box-flex: @grow;
+}
+
+.flex(@spec; @grow; @shrink; @basis) when not (@spec = 2009) {
+  -webkit-flex: @grow @shrink @basis;
+  -moz-flex: @grow @shrink @basis;
+  -ms-flex: @grow @shrink @basis;
+  -o-flex: @grow @shrink @basis;
+  flex: @grow @shrink @basis;
+}
+
+.flex-direction(@direction) when (@direction = row) {
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  box-orient: horizontal;
+}
+
+.flex-direction(@direction) when (@direction = row-reverse) {
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  box-orient: horizontal;
+  .flex-direction(reverse);
+}
+
+.flex-direction(@direction) when (@direction = column) {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -o-box-orient: vertical;
+  box-orient: vertical;
+}
+
+.flex-direction(@direction) when (@direction = column-reverse) {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -o-box-orient: vertical;
+  box-orient: vertical;
+  .flex-direction(reverse);
+}
+
+.flex-direction(@direction) {
+  -webkit-flex-direction: @direction;
+  -moz-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  -o-flex-direction: @direction;
+  flex-direction: @direction;
+}
+
+.order(@order) {
+  -webkit-box-ordinal-group: @order + 1;
+  -moz-box-ordinal-group: @order + 1;
+  -ms-box-ordinal-group: @order + 1;
+  -o-box-ordinal-group: @order + 1;
+  box-ordinal-group: @order + 1;
+  -ms-flex-order: @order;
+  -webkit-order: @order;
+  -moz-order: @order;
+  -ms-order: @order;
+  -o-order: @order;
+  order: @order;
+}
+
+.flex-wrap(@wrap-method) when (@wrap-method = wrap) {
+  -webkit-lines: multiple;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-box-lines: multiple;
+  -o-box-lines: multiple;
+  box-lines: multiple;
+}
+
+.flex-wrap(@wrap-method) when (@wrap-method = wrap-reverse) {
+  -webkit-lines: multiple;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -ms-box-lines: multiple;
+  -o-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-box-direction: reverse;
+  -moz-box-direction: reverse;
+  -ms-box-direction: reverse;
+  -o-box-direction: reverse;
+  box-direction: reverse;
+}
+
+.flex-wrap(@wrap-method) when (@wrap-method = nowrap) {
+  -webkit-lines: single;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  -ms-box-lines: single;
+  -o-box-lines: single;
+  box-lines: single;
+}
+
+.flex-wrap(@wrap-method) {
+  -webkit-flex-wrap: @wrap-method;
+  -moz-flex-wrap: @wrap-method;
+  -ms-flex-wrap: @wrap-method;
+  -o-flex-wrap: @wrap-method;
+  flex-wrap: @wrap-method;
+}
+
+.align-items(@align-item-method) when (@align-item-method = start) {
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-box-align: start;
+  -o-box-align: start;
+  box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  -o-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.align-items(@align-item-method) when (@align-item-method = end) {
+  -webkit-box-align: end;
+  -moz-box-align: end;
+  -ms-box-align: end;
+  -o-box-align: end;
+  box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.align-items(@align-item-method) when
+(@align-item-method = center),
+(@align-item-method = baseline),
+(@align-item-method = stretch) {
+  // 2009 spec
+  -webkit-box-align: @align-item-method;
+  -moz-box-align: @align-item-method;
+  -ms-box-align: @align-item-method;
+  -o-box-align: @align-item-method;
+  box-align: @align-item-method;
+  -ms-flex-align: @align-item-method;
+  -webkit-align-items: @align-item-method;
+  -moz-align-items: @align-item-method;
+  -ms-align-items: @align-item-method;
+  -o-align-items: @align-item-method;
+  align-items: @align-item-method;
+}
+
+.align-self(@align-self-method) when (@align-self-method = start) {
+  -ms-flex-item-align: @align-self-method;
+  flex-item-align: @align-self-method;
+  -webkit-align-self: flex-start;
+  -moz-align-self: flex-start;
+  -ms-align-self: flex-start;
+  -o-align-self: flex-start;
+  align-self: flex-start;
+}
+
+.align-self(@align-self-method) when (@align-self-method = end) {
+  -ms-flex-item-align: @align-self-method;
+  flex-item-align: @align-self-method;
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  -ms-align-self: flex-end;
+  -o-align-self: flex-end;
+  align-self: flex-end;
+}
+
+.align-self(@align-self-method) when
+(@align-self-method = auto),
+(@align-self-method = center),
+(@align-self-method = baseline),
+(@align-self-method = stretch) {
+  -ms-flex-item-align: @align-self-method;
+  flex-item-align: @align-self-method;
+  -webkit-align-self: @align-self-method;
+  -moz-align-self: @align-self-method;
+  -ms-align-self: @align-self-method;
+  -o-align-self: @align-self-method;
+  align-self: @align-self-method;
+}
+
+.align-content(@align-content-method) when (@align-content-method = start) {
+  -ms-flex-line-pack: @align-content-method;
+  -webkit-align-content: flex-start;
+  -moz-align-content: flex-start;
+  -o-align-content: flex-start;
+  align-content: flex-start;
+}
+
+.align-content(@align-content-method) when (@align-content-method = end) {
+  -ms-flex-line-pack: @align-content-method;
+  -webkit-align-content: flex-end;
+  -moz-align-content: flex-end;
+  -o-align-content: flex-end;
+  align-content: flex-end;
+}
+
+.align-content(@align-content-method) when (@align-content-method = space-between) {
+  -ms-flex-line-pack: justify;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -o-align-content: space-between;
+  align-content: space-between;
+}
+
+.align-content(@align-content-method) when (@align-content-method = space-around) {
+  -ms-flex-line-pack: distribute;
+  -webkit-align-content: space-around;
+  -moz-align-content: space-around;
+  -o-align-content: space-around;
+  align-content: space-around;
+}
+
+.align-content(@align-content-method) when
+(@align-content-method = center),
+(@align-content-method = stretch) {
+  -ms-flex-line-pack: @align-content-method;
+  -webkit-align-content: @align-content-method;
+  -moz-align-content: @align-content-method;
+  -o-align-content: @align-content-method;
+  align-content: @align-content-method;
+}
+
+.justify-content(@justify-method) when (@justify-method = start) {
+  -webkit-box-pack: @justify-method;
+  -moz-box-pack: @justify-method;
+  -ms-box-pack: @justify-method;
+  -o-box-pack: @justify-method;
+  box-pack: @justify-method;
+  -ms-flex-pack: @justify-method;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.justify-content(@justify-method) when (@justify-method = end) {
+  -webkit-box-pack: @justify-method;
+  -moz-box-pack: @justify-method;
+  -ms-box-pack: @justify-method;
+  -o-box-pack: @justify-method;
+  box-pack: @justify-method;
+  -ms-flex-pack: @justify-method;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  -o-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.justify-content(@justify-method) when (@justify-method = center) {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+
+.justify-content(@justify-method) when (@justify-method = space-between) {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.justify-content(@justify-method) when (@justify-method = space-around) {
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.flex-grow(@multiplier) {
+  // 2009 spec
+  -webkit-box-flex: @multiplier;
+  -webkit-flex-grow: @multiplier;
+  -moz-box-flex: @multiplier;
+  -ms-flex: @multiplier 1 auto;
+  flex-grow: @multiplier;
+}
+
+.flex-shrink(@multiplier) {
+  -webkit-flex-shrink: @multiplier;
+  -ms-flex: 0 @multiplier auto;
+  flex-shrink: @multiplier;
+}
+
+.flex-basis(@width) {
+  -webkit-flex-basis: @width;
+  -ms-flex: 0 1 @width;
+  flex-basis: @width;
+}
+
+.flex-flow (@direction; @rest...) {
+  -webkit-flex-flow: @direction @rest;
+  -ms-flex-flow: @direction @rest;
+  flex-flow: @direction @rest;
+}

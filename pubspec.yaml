@@ -1,0 +1,16 @@
+name: flex_less
+version: '0.1.0'
+authors:
+- Neeraj Mittal <mittal.neeraj@gmail.com>
+description: Flex based less-css files.
+homepage: https://github.com/neermitt/ngAria-dart
+environment:
+  sdk: '>=1.4.0'
+dependencies:
+dev_dependencies:
+  less_dart: any
+transformers:
+- less_dart:
+    entry_point: web/index.less
+    build_mode: dart
+    compress: true
